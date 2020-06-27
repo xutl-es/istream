@@ -5,9 +5,9 @@ import { Readable } from 'stream';
 
 export function events<T>(source: EventEmitter, event: string | symbol, final: string | symbol): AsyncIterable<T> {
 	const iq = queue<T>();
-	source.on(event, iq.push);
-	source.on(final, iq.done);
-	source.on('error', iq.error);
+	source.on(event, (item: T) => iq.push(item));
+	source.on(final, () => iq.done());
+	source.on('error', (err: Error) => iq.error(err));
 	return iq as AsyncIterable<T>;
 }
 
