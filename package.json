@@ -4,7 +4,9 @@
 	"description": "Iterable Stream Utilities",
 	"main": "src/index.js",
 	"scripts": {
-		"test": "xutltest"
+		"test": "xutltest",
+		"build": "tsc",
+		"prepublishOnly": "npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -26,7 +28,8 @@
 		"@xutl/queue": "~0.0.1 || ^1.0.0"
 	},
 	"devDependencies": {
-		"typescript": "^3.9.5",
-		"@xutl/defer": "~0.0.1 || ^1.0.0"
+		"@types/node": "^14.0.14",
+		"@xutl/test": "^1.0.2",
+		"typescript": "^3.9.5"
 	}
 }
