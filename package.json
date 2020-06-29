@@ -1,6 +1,6 @@
 {
 	"name": "@xutl/istream",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Iterable Stream Utilities",
 	"main": "src/index.js",
 	"scripts": {
