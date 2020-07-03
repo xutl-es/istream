@@ -43,3 +43,11 @@ export function lines(source: Readable | AsyncIterable<Buffer | string>): AsyncI
 	})(base, iter).catch((error) => iter.error(error));
 	return iter;
 }
+
+const Default = Object.freeze({
+	events,
+	buffers,
+	strings,
+	lines,
+});
+export default Default;
